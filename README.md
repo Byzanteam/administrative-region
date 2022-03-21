@@ -1,28 +1,70 @@
-# administrative-region
+# 合作街道数据
 
-中华人民共和国行政区划（五级）：省级、地级、县级、乡级和村级。来自中华人民共和国民政部，用于查询中国省，市和区数据的网站。
+地方使用的实际数据与国家统计局公布数据有一定出入，对区划代码受影响的层级数据进行微调以便客户能正常使用。
 
-- [中华人民共和国行政区划代码，更新时间：2021-01-04](http://www.mca.gov.cn/article/sj/xzqh/2020/)  
-- [统计用区划和城乡划分代码，更新时间：2020-11-06](http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/)
+ps：目前四川省民政厅公布的数据是对齐国家统计局的，所以不能使用。
+[2021年度四川省行政区划代码公告](http://mzt.sc.gov.cn/scmzt/gsgg/2022/1/18/3134f7f1b7524b20a562da0048bcd93d.shtml)
 
-说明：
-- code - 城市代码
-- name - 城市名称
-- province - 省级(省/直辖市/特别行政区)代码
-- city - 地级(城市)代码
-- area - 县级(区县)代码
-- town - 乡级(乡镇/街)代码
+规则：
+- 按照地方数据更改层级代码，以便级**联选择选项满足客户要求**
+- **保留 code 不变**，作为对齐国家统计数据的唯一识别
+
+变更说明:
+- area
+  - 新增
+    | code | name | province | city | area |
+    | ---- | ---- | ---- | ---- | ---- |
+    | `510102` | 高新区 | 51 | 1 |	`2` |
+    | `510156` | 天府新区 | 51 | 1 | `56` |
+    | `510157` | 东部新区 | 51 | 1 | `57` |
+- town
+  - 修改
+    | code | name | province | city | area | town |
+    | ---- | ---- | ---- | ---- | ---- | ---- |
+    | 510117019000 | 合作街道 | 51 | 1 | `2` | 19000 |
+    | 510117020000 | 西园街道 | 51 | 1 | `2` | 20000 |
+    | 510107061000 | 芳草街街道 | 51 | 1 | `2` | 61000 |
+    | 510107062000 | 肖家河街道 | 51 | 1 | `2` | 62000 |
+    | 510107063000 | 石羊街道 | 51 | 1 | `2` | 63000 |
+    | 510107064000 | 桂溪街道 | 51 | 1 | `2` | 64000 |
+    | 510116004000 | 中和街道 | 51 | 1 | `2` | 4000 |
+    | 510116003000 | 华阳街道 | 51 | 1 | `56` | 3000 |
+    | 510116018000 | 万安街道 | 51 | 1 | `56` | 18000 |
+    | 510116019000 | 正兴街道 | 51 | 1 | `56` | 19000 |
+    | 510116020000 | 兴隆街道 | 51 | 1 | `56` | 20000 |
+    | 510116021000 | 煎茶街道 | 51 | 1 | `56` | 21000 |
+    | 510116022000 | 新兴街道 | 51 | 1 | `56` | 22000 |
+    | 510116023000 | 籍田街道 | 51 | 1 | `56` | 23000 |
+    | 510116024000 | 太平街道 | 51 | 1 | `56` | 24000 |
+    | 510116025000 | 永兴街道 | 51 | 1 | `56` | 25000 |
+    | 510185009000 | 石盘街道 | 51 | 1 | `57` | 9000 |
+    | 510185010000 | 养马街道 | 51 | 1 | `57` | 10000 |
+    | 510185011000 | 贾家街道 | 51 | 1 | `57` | 11000 |
+    | 510185012000 | 石板凳街道 | 51 | 1 | `57` | 12000 |
+    | 510185013000 | 三岔街道 | 51 | 1 | `57` | 13000 |
+    | 510185014000 | 草池街道 | 51 | 1 | `57` | 14000 |
+    | 510185015000 | 福田街道 | 51 | 1 | `57` | 15000 |
+    | 510185016000 | 玉成街道 | 51 | 1 | `57` | 16000 |
+    | 510185017000 | 丹景街道 | 51 | 1 | `57` | 17000 |
+    | 510185122000 | 芦葭镇 | 51 | 1 | `57` | 122000 |
+    | 510185126000 | 高明镇 | 51 | 1 | `57` | 126000 |
+    | 510185127000 | 武庙镇 | 51 | 1 | `57` | 127000 |
+    | 510185128000 | 壮溪镇 | 51 | 1 | `57` | 128000 |
+    | 510185131000 | 董家埂镇 | 51 | 1 | `57` | 131000 |
+    | 510185132000 | 海螺镇 | 51 | 1 | `57` | 132000 |
 
 ## 更多数据
 
 | 文件列表 | CSV|
 | ---- | ---- |
-| 省级(省/直辖市/特别行政区) | [province.csv](https://github.com/Byzanteam/administrative-region/blob/main/area.csv) |
-| 地级(城市) | [city.csv](https://github.com/Byzanteam/administrative-region/blob/main/city.csv) |
-| 县级(区县) | [area.csv](https://github.com/Byzanteam/administrative-region/blob/main/area.csv) |
-| 乡级(乡镇/街) | [town.csv](https://github.com/Byzanteam/administrative-region/blob/main/town.csv) |
-
-
-## 参考链接
-
-- [中华人民共和国行政区划代码](https://github.com/uiwjs/province-city-china)
+| 省级(省/直辖市/特别行政区) | [province.csv](https://github.com/Byzanteam/administrative-region/blob/hzjd/province.csv) |
+| 地级(城市) | [city.csv](https://github.com/Byzanteam/administrative-region/blob/hzjd/city.csv) |
+| 县级(区县) | [area.csv](https://github.com/Byzanteam/administrative-region/blob/hzjd/area.csv) |
+| 乡级(乡镇/街) | [town.csv](https://github.com/Byzanteam/administrative-region/blob/hzjd/town.csv) |
+    
+## 参考资料
+    
+- [四川政务服务网-高新区](http://cdsgxq.sczwfw.gov.cn/col/col24430/index.html?areaCode=510109000000)
+- [四川政务服务网-天府新区](http://cdstfxq.sczwfw.gov.cn/col/col24565/index.html?areaCode=510110000000)
+- [四川政务服务网-东部新区](http://cdsdbxq.sczwfw.gov.cn/col/col43527/index.html?areaCode=510186000000)
+- [本地宝 - 政策法规](http://m.wenda.bendibao.com/life/94620.shtm)
